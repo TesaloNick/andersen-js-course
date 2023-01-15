@@ -10,7 +10,11 @@
  * console.log(task11Old({}, 'a')); -> false
  * console.log(task11Old({a: ''}, 'a')); -> ''
  */
-
+// -> 0
+// console.log(task11Old({ a: 1 }, 'a'))//; -> 1
+// console.log(task11Old({ a: null }, 'a'))//; -> false
+// console.log(task11Old({}, 'a'))//; -> false
+// console.log(task11Old({ a: '' }, 'a'))//; -> ''
 export function task11Old(obj, fieldName) {
   return obj[fieldName] == null ? false : obj[fieldName];
 }
@@ -18,4 +22,4 @@ export function task11Old(obj, fieldName) {
 // Напишите реализацию функции task11Old на ESnext ниже этого комментария.
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
-export function task11New() {}
+export const task11New = (obj, fieldName) => obj[fieldName] ?? false;
